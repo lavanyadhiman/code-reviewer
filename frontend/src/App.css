@@ -1,0 +1,99 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  width: 100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #1a1a1a;
+  color: #f0f0f0;
+}
+
+main {
+  height: 100%;
+  width: 100%;
+  padding: 1.5rem;
+  display: flex;
+  gap: 1.5rem;
+  background-color: #121212;
+}
+
+main .left,
+main .right {
+  height: 100%;
+  flex-basis: 50%;
+  border-radius: 0.7rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+main .left {
+  background-color: #000000;
+  position: relative;
+  padding: 1rem;
+}
+
+.left .code,
+.code pre,
+.code pre code {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  border-radius: 0.7rem;
+  background-color: #0c0c0c;
+  overflow: auto;
+}
+
+main .left .review {
+  position: absolute;
+  bottom: 1.2rem;
+  right: 1.2rem;
+  background-color: #4f46e5;
+  color: white;
+  padding: 0.6rem 1.8rem;
+  font-weight: 500;
+  font-size: 1rem;
+  cursor: pointer;
+  user-select: none;
+  border-radius: 0.7rem;
+  transition: background-color 0.2s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+main .left .review:hover {
+  background-color: #4338ca;
+}
+
+main .right {
+  background-color: #222;
+  padding: 1rem 1.5rem;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  overflow-y: auto;
+  border: 1px solid #333;
+}
+
+main .right h1,
+main .right h2,
+main .right h3 {
+  color: #fff;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+main .right pre {
+  background-color: #1e1e1e;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  overflow-x: auto;
+}
+
+main .right code {
+  font-family: 'Fira Code', monospace;
+}
