@@ -1,3 +1,4 @@
+/* Base Reset */
 * {
   margin: 0;
   padding: 0;
@@ -14,11 +15,13 @@ body,
   color: #f0f0f0;
 }
 
+/* Main Layout */
 main {
   height: 100%;
   width: 100%;
   padding: 1.5rem;
   display: flex;
+  flex-direction: row;
   gap: 1.5rem;
   background-color: #121212;
 }
@@ -26,7 +29,7 @@ main {
 main .left,
 main .right {
   height: 100%;
-  flex-basis: 50%;
+  flex: 1;
   border-radius: 0.7rem;
   overflow: hidden;
   display: flex;
@@ -50,6 +53,7 @@ main .left {
   overflow: auto;
 }
 
+/* Review Button */
 main .left .review {
   position: absolute;
   bottom: 1.2rem;
@@ -70,10 +74,11 @@ main .left .review:hover {
   background-color: #4338ca;
 }
 
+/* Right Pane */
 main .right {
   background-color: #222;
   padding: 1rem 1.5rem;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   line-height: 1.6;
   overflow-y: auto;
   border: 1px solid #333;
@@ -96,4 +101,29 @@ main .right pre {
 
 main .right code {
   font-family: 'Fira Code', monospace;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  main {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  main .left,
+  main .right {
+    height: auto;
+    min-height: 50vh;
+  }
+
+  main .left .review {
+    position: static;
+    margin-top: 1rem;
+    align-self: flex-end;
+  }
+
+  main .right {
+    font-size: 1rem;
+    padding: 1rem;
+  }
 }
